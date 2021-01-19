@@ -7,3 +7,5 @@ The files in this repository collectively produce distribution maps (presence/ab
 S2SRstack2019.py creates a quality mosaic of Sentinel-2 surface reflectance (Level 2a) imagery over 2019 minimizing clouds, shadows, and snow and maximizing greenness. The final image has 50 bands – 10 of the 13 available bands quality mosaicked for each month June-October. We exclude the three ‘atmospheric’ bands at 60m resolution. S2SRstack2020.py does the same for 2020.
 
 dist_RF_RMBL_2019.ipynb and dist_RF_RMBL_2020.ipynb are python notebooks to be opened in Google Colab. They import the final images produced in S2SRstack2019.py and S2SRstack2020.py, respectively. Each produces an aspen cover map using a random forest classifier. Reference data was hand-delineated using high-resolution Google Earth Engine basemap imagery.
+
+NOTE: to run the Colab notebooks you must have an existing Earth Engine account.
