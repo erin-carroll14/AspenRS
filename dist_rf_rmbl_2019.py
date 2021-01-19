@@ -1,7 +1,3 @@
-# connect to google drive
-from google.colab import drive
-drive.mount('/content/drive')
-
 # import earth engine library
 import ee
 import folium
@@ -11,10 +7,9 @@ from folium import plugins
 ee.Authenticate()
 ee.Initialize()
 
-# Commented out IPython magic to ensure Python compatibility.
 # call 2019 imagery stack
-# %cd /content/drive/My\ Drive/Colab\ Notebooks/Aspen/Cytotype
-
+!git clone https://www.github.com/erin-carroll14/AspenRS.git
+%cd /content/AspenRS
 from S2SRstack2019 import stacked2019_JunOct, Colorado
 
 # Veg mask
@@ -85,3 +80,5 @@ classifier = ee.Classifier.smileRandomForest(10).train(**{
 
 # deploy model
 aspenMask2019 = stackVegRMBL2019.classify(classifier)
+
+print('2019 aspen cover map loaded')
