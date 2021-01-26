@@ -1,4 +1,3 @@
-Creator: Erin Carroll
 Contact: erin_carroll@berkeley.edu
 Last Update: January 19, 2021
 
